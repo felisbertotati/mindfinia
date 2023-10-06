@@ -2,12 +2,25 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import HeroImage from "./images/backgroundtwo.png";
 import NavBar from "./componentes/navBar";
+import Hero from "./componentes/hero";
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <div
+        style={{
+          backgroundImage: `url(${HeroImage})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          width: "100%",
+          height: "750px",
+        }}
+      >
+        <NavBar />
+        <Hero />
+      </div>
     </div>
   );
 }

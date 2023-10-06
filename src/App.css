@@ -1,0 +1,44 @@
+/*navbar*/
+.navbar.border-bottom {
+  border-bottom: 1px solid #f1f1f1; /* Very light gray */
+}
+.navbar-nav .nav-item {
+  padding-left: 20px;
+  position: relative;
+}
+
+.navbar-nav .nav-item .nav-link {
+  transition: color 0.3s ease; /* Optional: for smooth color transition */
+  padding: 0; /* Remove padding to make underline fit text */
+  /* Your other styles for nav-link here */
+}
+
+.navbar-nav .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white; /* Or any other color for the underline */
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover::after {
+  width: calc(100% - 2px); /* Adjust width as needed for desired effect */
+}
+
+/*Jumbotron style*/
+.lead {
+  color: white;
+  font-size: 32px;
+  font-family: Syne;
+  font-weight: 600;
+  line-height: 40px;
+  word-wrap: break-word;
+  padding-left: 150px;
+  padding-right: 150px;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-top: 130px;
+}
