@@ -1,11 +1,13 @@
+import logo from "../images/logo.png";
+
 const Navbar = () => {
   return (
     <>
       {" "}
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar  navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            Navbar
+            <img className="navLogo" src={logo} alt="Logo" />
           </a>
           <button
             class="navbar-toggler"
@@ -18,26 +20,39 @@ const Navbar = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+          <div
+            class="collapse navbar-collapse d-flex justify-content-end "
+            id="navbarNav"
+          >
+            <ul class="navbar-nav ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a class="nav-link" aria-current="page" href="#">
                   Home
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Features
+                  About Us
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Pricing
+                  Who We are
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">
-                  Disabled
+                <a class="nav-link" href="#">
+                  What We Do?
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Solution
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Contact Us
                 </a>
               </li>
             </ul>
