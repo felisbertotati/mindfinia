@@ -42,3 +42,34 @@
   letter-spacing: 4px;
   margin-top: 130px;
 }
+
+/*slide*/
+.slide {
+  color: white;
+  font-size: 24px;
+  font-family: Syne;
+  font-weight: 600;
+  line-height: 37.08px;
+  word-wrap: break-word;
+  height: 50px;
+  margin-right: 60px;
+  margin-top: 15px;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite; /* adjust duration as required */
+  display: flex;
+  width: calc(250px * 18); /* For 18 words */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-250px * 9));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
