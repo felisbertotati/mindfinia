@@ -21,6 +21,7 @@ function InfiniteCarousel() {
     "TRANSPARENCY",
     "COLLABORATION",
     "IMPROVEMENT",
+    "PTABILITY",
   ];
 
   return (

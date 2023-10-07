@@ -52,7 +52,7 @@
   line-height: 37.08px;
   word-wrap: break-word;
   height: 50px;
-  margin-right: 60px;
+  margin-right: 40px;
   margin-top: 15px;
 }
 
@@ -72,4 +72,52 @@
   100% {
     transform: translateX(0);
   }
+}
+
+/*style about*/
+.aboutImage {
+  /* ... any other styles you've set for aboutImage ... */
+  box-shadow: 10px 10px 0px 0px rgba(106, 215, 229, 1); /* solid shadow */
+  border-radius: 20px;
+  height: 75%;
+  width: 90%;
+}
+
+hr {
+  border: none; /* Removes the default border */
+  height: 5px; /* Specifies the height/thickness of the line */
+  background-color: #6ad7e5; /* Color of the line */
+  width: 5%; /* Width of the line, set to 50% of its container */
+  margin: 20px auto;
+}
+
+.iconleft {
+  margin-top: 55px;
+  color: #6ad7e5;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 15px;
+  border: #6ad7e5 1px solid;
+  height: 40px;
+  width: 40px;
+}
+
+.iconright {
+  color: white;
+  border-radius: 50%;
+  background-color: #6ad7e5;
+  margin-top: 55px;
+  margin-right: 40px;
+  border: #6ad7e5 1px solid;
+  height: 40px;
+  width: 40px;
+}
+
+.people .workingWith {
+  color: black;
+  font-size: 32px;
+  font-family: Syne;
+  font-weight: 700;
+  line-height: 49.44px;
+  word-wrap: break-word;
 }

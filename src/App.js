@@ -6,6 +6,7 @@ import HeroImage from "./images/backgroundtwo.png";
 import NavBar from "./componentes/navBar";
 import Hero from "./componentes/hero";
 import Carouseltext from "./componentes/carousel";
+import About from "./componentes/about";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Hero />
       </div>
       <Carouseltext />
+      <About />
     </div>
   );
 }
