@@ -84,6 +84,7 @@
 }
 
 hr {
+  border-top: none !important;
   border: none; /* Removes the default border */
   height: 5px; /* Specifies the height/thickness of the line */
   background-color: #6ad7e5; /* Color of the line */

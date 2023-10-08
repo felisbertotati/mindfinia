@@ -7,7 +7,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const About = () => {
   return (
     <div>
-      <div className="container mt-5">
+      <div className="container mt-5 ">
         <div className="row align-items-center">
           <div className="col-md-7">
             <hr />
@@ -32,7 +32,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container mt-5">
+      <div className="container mt-4 mb-4">
         <div className="row">
           <div className="col-md-6">
             <hr />
