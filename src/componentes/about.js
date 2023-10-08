@@ -7,7 +7,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const About = () => {
   return (
     <div>
-      <div className="container mt-5 ">
+      <div className="container mt-5  ">
         <div className="row align-items-center">
           <div className="col-md-7">
             <hr />
@@ -32,14 +32,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container mt-4 mb-4">
+      <div className="container mt-5 mb-5">
         <div className="row">
           <div className="col-md-6">
             <hr />
             <h6 className="people">Meet the people</h6>
             <h4 className="WorkingWith">We are Working With</h4>
           </div>
-          <div className="col-md-6 d-flex justify-content-end">
+          <div className="col-md-6 d-flex  mb-5 justify-content-end">
             <button className="iconleft">
               <FontAwesomeIcon icon={faArrowLeft} />
             </button>

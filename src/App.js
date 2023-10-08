@@ -7,6 +7,7 @@ import NavBar from "./componentes/navBar";
 import Hero from "./componentes/hero";
 import Carouseltext from "./componentes/carousel";
 import About from "./componentes/about";
+import LogoCarousel from "./componentes/logocarousel";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           width: "100%",
-          height: "675px",
+          height: "625px",
         }}
       >
         <NavBar />
@@ -25,6 +26,7 @@ function App() {
       </div>
       <Carouseltext />
       <About />
+      <LogoCarousel />
     </div>
   );
 }
