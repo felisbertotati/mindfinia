@@ -1,16 +1,25 @@
+body,
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /*navbar*/
 .navbar.border-bottom {
-  border-bottom: 1px solid #f1f1f1; /* Very light gray */
+  border-bottom: 1px solid #f1f1f1;
 }
 .navbar-nav .nav-item {
   padding-left: 20px;
   position: relative;
 }
 
+.active-link {
+  border-bottom: 2px solid white;
+}
+
 .navbar-nav .nav-item .nav-link {
-  transition: color 0.3s ease; /* Optional: for smooth color transition */
-  padding: 0; /* Remove padding to make underline fit text */
-  /* Your other styles for nav-link here */
+  transition: color 0.3s ease;
+  padding: 0;
 }
 
 .navbar-nav .nav-item::after {
@@ -20,12 +29,12 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: white; /* Or any other color for the underline */
+  background-color: white;
   transition: width 0.3s ease;
 }
 
 .navbar-nav .nav-item:hover::after {
-  width: calc(100% - 2px); /* Adjust width as needed for desired effect */
+  width: calc(100% - 2px);
 }
 
 /*Jumbotron style*/
@@ -54,30 +63,33 @@
   height: 50px;
   margin-right: 40px;
   margin-top: 15px;
+  display: flex;
+  align-items: center; /* vertically center the text in the slide */
+  white-space: nowrap; /* prevent the word from breaking onto multiple lines */
 }
 
 .slider .slide-track {
-  animation: scroll 40s linear infinite; /* adjust duration as required */
+  animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 18); /* For 18 words */
+  width: calc(
+    (100% - 40px) * 19
+  ); /* Calculate the width based on the number of words and margin */
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
-  50% {
-    transform: translateX(calc(-150px * 9));
-  }
   100% {
-    transform: translateX(0);
+    transform: translateX(
+      calc(-1 * (100vw - 40px))
+    ); /* Scroll the exact width of one set of words */
   }
 }
 
 /*style about*/
 .aboutImage {
-  /* ... any other styles you've set for aboutImage ... */
-  box-shadow: 10px 10px 0px 0px rgba(106, 215, 229, 1); /* solid shadow */
+  box-shadow: 10px 10px 0px 0px rgba(106, 215, 229, 1);
   border-radius: 20px;
   height: 75%;
   width: 90%;
@@ -85,10 +97,10 @@
 
 hr {
   border-top: none !important;
-  border: none; /* Removes the default border */
-  height: 5px; /* Specifies the height/thickness of the line */
-  background-color: #6ad7e5; /* Color of the line */
-  width: 5%; /* Width of the line, set to 50% of its container */
+  border: none;
+  height: 5px;
+  background-color: #6ad7e5;
+  width: 5%;
   margin: 20px auto;
 }
 
@@ -121,4 +133,102 @@ hr {
   font-weight: 700;
   line-height: 49.44px;
   word-wrap: break-word;
+}
+
+/*services*/
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.box {
+  margin: 0 10px;
+  width: 20%;
+  min-height: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box-inner {
+  height: 100%;
+}
+
+.ImageIcon {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.title {
+  color: black;
+  font-size: 20px;
+  font-family: Syne;
+  font-weight: 600;
+  line-height: 27.3px;
+  word-wrap: break-word;
+}
+
+.text {
+  color: #718096;
+  font-size: 14px;
+  font-family: Rubik;
+  font-weight: 400;
+  line-height: 22.68px;
+  word-wrap: break-word;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.prev,
+.next {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.dot-buttons {
+  justify-content: center;
+  padding: 10px;
+  display: flex !important;
+  visibility: visible !important;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.dot.active {
+  background-color: #4d455d;
+}
+
+.servicesC {
+  margin-top: 175px;
 }

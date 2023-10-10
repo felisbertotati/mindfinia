@@ -1,17 +1,21 @@
+import React from "react";
 import logo from "../images/logo.png";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
     <>
-      {" "}
-      <nav class="navbar navbar-expand-lg bg-transperant border-bottom ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-lg bg-transperant border-bottom">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
             <img className="navLogo" src={logo} alt="Logo" />
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -19,42 +23,78 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse d-flex justify-content-end "
+            className="collapse navbar-collapse d-flex justify-content-end"
             id="navbarNav"
           >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link text-light" aria-current="page" href="#">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink
+                  to="/"
+                  className={`nav-link ${
+                    isHomePage ? "text-light" : "text-dark"
+                  }`}
+                  activeClassName="active-link"
+                >
                   Home
-                </a>
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light " href="#">
+              <li className="nav-item">
+                <NavLink
+                  to="/about"
+                  className={`nav-link ${
+                    isHomePage ? "text-light" : "text-dark"
+                  }`}
+                  activeClassName="active-link"
+                >
                   About Us
-                </a>
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">
+              <li className="nav-item">
+                <NavLink
+                  to="/who-we-are"
+                  className={`nav-link ${
+                    isHomePage ? "text-light" : "text-dark"
+                  }`}
+                  activeClassName="active-link"
+                >
                   Who We are
-                </a>
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">
+              <li className="nav-item">
+                <NavLink
+                  to="/what-we-do"
+                  className={`nav-link ${
+                    isHomePage ? "text-light" : "text-dark"
+                  }`}
+                  activeClassName="active-link"
+                >
                   What We Do?
-                </a>
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">
+              <li className="nav-item">
+                <NavLink
+                  to="/solution"
+                  className={`nav-link ${
+                    isHomePage ? "text-light" : "text-dark"
+                  }`}
+                  activeClassName="active-link"
+                >
                   Solution
-                </a>
+                </NavLink>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">
+              <li className="nav-item">
+                <NavLink
+                  to="/contact"
+                  className={`nav-link ${
+                    isHomePage ? "text-light" : "text-dark"
+                  }`}
+                  activeClassName="active-link"
+                >
                   Contact Us
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
