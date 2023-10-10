@@ -5,6 +5,7 @@ import Services from "../componentes/services";
 import WhyUsImage from "../images/whyUs.png";
 import HeroImage from "../images/heroimage.png";
 import imageAbout from "../images/aboutImage.png";
+import Ability from "../componentes/ability";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -88,7 +89,7 @@ const home = () => {
         <Services />
       </div>
       <div>
-        <div className="row align-items-center">
+        <div className="row align-items-center mb-5">
           <div className="col-md-7">
             <hr />
             <h4 className="about ">Why Choose Us</h4>
@@ -117,6 +118,9 @@ const home = () => {
             />
           </div>
         </div>
+      </div>
+      <div>
+        <Ability />
       </div>
     </>
   );
