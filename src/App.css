@@ -49,7 +49,7 @@ html {
   padding-right: 150px;
   text-align: center;
   letter-spacing: 4px;
-  margin-top: 130px;
+  margin-top: 230px;
 }
 
 /*slide*/
@@ -91,8 +91,9 @@ html {
 .aboutImage {
   box-shadow: 10px 10px 0px 0px rgba(106, 215, 229, 1);
   border-radius: 20px;
-  height: 75%;
-  width: 90%;
+  height: 70%;
+  width: 80%;
+  margin-top: 50px;
 }
 
 hr {
@@ -101,11 +102,20 @@ hr {
   height: 5px;
   background-color: #6ad7e5;
   width: 5%;
-  margin: 20px auto;
 }
 
+.about {
+  margin-left: 50px;
+}
+
+.paragraph {
+  margin-left: 50px;
+}
+.buttonArrow {
+  display: flex;
+  align-items: flex-end;
+}
 .iconleft {
-  margin-top: 55px;
   color: #6ad7e5;
   border-radius: 50%;
   background-color: white;
@@ -119,8 +129,7 @@ hr {
   color: white;
   border-radius: 50%;
   background-color: #6ad7e5;
-  margin-top: 55px;
-  margin-right: 40px;
+
   border: #6ad7e5 1px solid;
   height: 40px;
   width: 40px;
@@ -134,101 +143,29 @@ hr {
   line-height: 49.44px;
   word-wrap: break-word;
 }
+.meetPeople {
+  margin-left: 50px;
+}
 
 /*services*/
+/* ... (other styles from before) ... */
 
-.wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 60%;
-
-  display: flex;
-  justify-content: center;
+.card img {
+  width: 250px;
+  height: 250px;
+  object-fit: center;
 }
 
-.list {
-  display: flex;
-  transition: transform 0.3s ease;
-}
-
-.box {
-  margin: 0 10px;
-  width: 20%;
-  min-height: 500px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box:hover {
-  transform: translateY(10px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.box-inner {
-  height: 100%;
-}
-
-.ImageIcon {
-  display: block;
-  margin: 0 auto;
-  padding: 10px;
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-}
-
-.title {
-  color: black;
-  font-size: 20px;
+.card-content h2 {
   font-family: Syne;
   font-weight: 600;
-  line-height: 27.3px;
-  word-wrap: break-word;
+  font-size: 20px;
+  color: #2d3748;
 }
 
-.text {
-  color: #718096;
-  font-size: 14px;
+.card-content p {
   font-family: Rubik;
   font-weight: 400;
-  line-height: 22.68px;
-  word-wrap: break-word;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.prev,
-.next {
-  margin: 0 10px;
-  cursor: pointer;
-}
-
-.dot-buttons {
-  justify-content: center;
-  padding: 10px;
-  display: flex !important;
-  visibility: visible !important;
-}
-
-.dot {
-  width: 15px;
-  height: 15px;
-  background-color: #e0e0e0;
-  border-radius: 50%;
-  margin: 0 5px;
-  border: none;
-  cursor: pointer;
-  display: inline-block !important;
-  visibility: visible !important;
-}
-
-.dot.active {
-  background-color: #4d455d;
-}
-
-.servicesC {
-  margin-top: 175px;
+  font-size: 14px;
+  color: #718096;
 }

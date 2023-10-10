@@ -9,7 +9,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-transperant border-bottom">
+      <nav
+        className="navbar navbar-expand-lg bg-transperant border-bottom"
+        style={{
+          zIndex: 3,
+          position: "relative",
+        }}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img className="navLogo" src={logo} alt="Logo" />
