@@ -150,22 +150,6 @@ hr {
 /*services*/
 /* ... (other styles from before) ... */
 
-.card img {
-  width: 250px;
-  height: 250px;
-  object-fit: center;
-}
-
-.card-content h2 {
-  font-family: Syne;
-  font-weight: 600;
-  font-size: 20px;
-  color: #2d3748;
-}
-
-.card-content p {
-  font-family: Rubik;
-  font-weight: 400;
-  font-size: 14px;
-  color: #718096;
+.heading {
+  margin-left: 50px;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "../componentes/carousel";
 import LogoCarousel from "../componentes/logocarousel";
 import Services from "../componentes/services";
+import WhyUsImage from "../images/whyUs.png";
 import HeroImage from "../images/heroimage.png";
 import imageAbout from "../images/aboutImage.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -83,7 +84,40 @@ const home = () => {
       <div>
         <LogoCarousel />
       </div>
-      <Services />
+      <div>
+        <Services />
+      </div>
+      <div>
+        <div className="row align-items-center">
+          <div className="col-md-7">
+            <hr />
+            <h4 className="about ">Why Choose Us</h4>
+            <h6 className="heading">
+              UNMATCHED EXPERTISE, EMPOWERING SCALABILITY, & IRRESISTIBLE
+              COMPETITIVE PRICING
+            </h6>
+            <p className="paragraph">
+              Gravity Infosolutions is a dynamic digital transformation,
+              Salesforce consulting and development powerhouse, dedicated to
+              empowering businesses to unleash the full potential of the
+              Salesforce platform. With a comprehensive suite of cutting-edge
+              services, we enable organizations to embark on seamless Salesforce
+              implementation, tailor-made customization, seamless integration,
+              streamlined migration, and unwavering support. We are your trusted
+              partner in harnessing the transformative power of Salesforce to
+              drive unprecedented growth, enhance operational efficiency, and
+              achieve unrivaled success.
+            </p>
+          </div>
+          <div className="col-md-5">
+            <img
+              className="aboutImage"
+              src={WhyUsImage}
+              alt="Image about the company"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

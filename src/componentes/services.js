@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import iconOne from "../images/iconone.png";
 import iconTwo from "../images/icontwo.png";
 import iconThree from "../images/iconthree.png";
@@ -8,10 +8,9 @@ const Card = (props) => (
     className="card cardStyle"
     style={{
       flex: "1 0 250px",
-      margin: "1rem",
+      margin: "2rem",
       overflow: "hidden",
       borderRadius: "6px",
-      //   transition: "all 250ms ease-in-out",
       cursor: "pointer",
     }}
   >
@@ -27,7 +26,7 @@ const Card = (props) => (
         paddingLeft: "10px",
         paddingRight: "10px",
         marginLeft: "10px",
-        marginTop: " 10px",
+        marginTop: "10px",
       }}
     />
     <div className="card-content" style={{ padding: "1rem" }}>
@@ -55,28 +54,62 @@ const Card = (props) => (
   </div>
 );
 
-const CardContainer = (props) => (
-  <div
-    className="cards-container"
-    style={{
-      display: "flex",
+const CardContainer = (props) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef(null);
 
-      padding: "1rem",
+  const cardWidth = 272; // Approximate card width + margin
 
-      overflowX: "auto",
-      position: "relative",
-    }}
-  >
-    {props.cards.map((card) => (
-      <Card
-        key={card.title}
-        title={card.title}
-        desc={card.desc}
-        image={card.image}
-      />
-    ))}
-  </div>
-);
+  const handleIndexChange = (index) => {
+    setActiveIndex(index);
+    const newScrollPosition = index * cardWidth;
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = newScrollPosition;
+    }
+  };
+
+  return (
+    <div>
+      <div
+        ref={containerRef}
+        className="cards-container"
+        style={{
+          display: "flex",
+          padding: "1rem",
+          overflowX: "hidden",
+          position: "relative",
+          transition: "scroll-left 0.5s",
+        }}
+      >
+        {props.cards.map((card) => (
+          <Card
+            key={card.title}
+            title={card.title}
+            desc={card.desc}
+            image={card.image}
+          />
+        ))}
+      </div>
+      <div style={{ textAlign: "center", marginTop: "10px" }}>
+        {props.cards.map((_, index) => (
+          <span
+            key={index}
+            style={{
+              height: "8px",
+              width: "8px",
+              backgroundColor: activeIndex === index ? "#6AD7E5" : "#ddd",
+              borderRadius: "50%",
+              display: "inline-block",
+              margin: "0 2px",
+              cursor: "pointer",
+            }}
+            onClick={() => handleIndexChange(index)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Services = () => {
   const cardData = [
@@ -108,10 +141,18 @@ const Services = () => {
   ];
 
   return (
-    <div className="container" style={{ width: "90%", margin: "auto" }}>
-      <hr className="hr" style={{ marginLeft: "600px" }} />
-      <h1 style={{ textAlign: "center" }}>Services we offer</h1>
-      <CardContainer cards={cardData} />
+    <div className="div" style={{ background: "#F7FEFF" }}>
+      <div className="container" style={{ width: "90%", margin: "auto" }}>
+        <hr
+          className="hr"
+          style={{
+            marginLeft: "600px",
+            marginTop: "20px",
+          }}
+        />
+        <h1 style={{ textAlign: "center" }}>Services we offer</h1>
+        <CardContainer cards={cardData} />
+      </div>
     </div>
   );
 };
