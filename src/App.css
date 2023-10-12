@@ -171,3 +171,51 @@ hr {
   line-height: 49.44px;
   word-wrap: break-word;
 }
+
+/*reviews*/
+.iconReviewsLeft {
+  color: #6ad7e5;
+  border-radius: 50%;
+  background-color: white;
+
+  border: #6ad7e5 1px solid;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  left: -80px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.iconReviewsRight {
+  color: #6ad7e5;
+  border-radius: 50%;
+  background-color: white;
+
+  border: #6ad7e5 1px solid;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  right: -80px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.reviewer-card-wrapper {
+  margin: 0 10px;
+  transition: opacity 0.3s;
+}
+
+.active-card {
+  opacity: 1;
+}
+
+.inactive-card {
+  opacity: 0.5;
+}
+
+.hrReviws {
+  margin-left: 600px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}

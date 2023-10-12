@@ -7,6 +7,8 @@ import HeroImage from "../images/heroimage.png";
 import imageAbout from "../images/aboutImage.png";
 import Ability from "../componentes/ability";
 import Ourcustomers from "../componentes/ourCustomer";
+import Reviews from "../componentes/reviews";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -124,6 +126,7 @@ const home = () => {
         <Ability />
       </div>
       <Ourcustomers />
+      <Reviews />
     </>
   );
 };
