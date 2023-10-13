@@ -28,7 +28,7 @@ const logoCarousel = () => {
   ];
 
   return (
-    <div className="slider pb-5 bg-light">
+    <div className="slider pb-4 bg-light">
       <div className="slide-track">
         {images.map((imageSrc, index) => (
           <div key={index} className={`slide slide-${(index % 9) + 1}`}>

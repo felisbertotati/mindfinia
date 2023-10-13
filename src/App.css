@@ -219,3 +219,73 @@ hr {
   margin-top: 100px;
   margin-bottom: 30px;
 }
+
+/*work flow*/
+
+.workflow {
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #fff;
+  z-index: 0;
+}
+.timeline-content:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  width: 4px;
+  height: 60px;
+  background: #fff;
+  transform: translateY(50%);
+}
+
+.timeline-content:nth-child(even):before,
+.timeline-content:nth-child(even):after {
+  left: auto;
+  right: -30px;
+}
+
+.timeline-content:last-child:after {
+  content: none;
+}
+
+.timeline-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.timeline-point {
+  background: #0099ff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-content {
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
