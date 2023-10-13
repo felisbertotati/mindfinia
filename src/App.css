@@ -321,12 +321,12 @@ hr {
 .timeline::before {
   content: "";
   position: absolute;
-  top: 50%; /* Keeps the line in the middle vertically */
+  top: 50%;
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust the thickness of the line if needed */
-  background: #6ad7e5; /* The color of the line */
-  z-index: -1; /* So that it's below the cards */
+  height: 2px;
+  background: #6ad7e5;
+  z-index: -1;
 }
 
 .top {
