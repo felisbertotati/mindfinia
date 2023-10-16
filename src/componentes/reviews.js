@@ -89,7 +89,7 @@ const Reviews = () => {
   };
 
   return (
-    <div className="content-wrapper container">
+    <div className="content-wrapper container mt-5">
       <hr className="hrReviws" />
       <h1 className="mb-4 text-center">Why customers love</h1>
       <h2 className="text-center mb-5">working with us</h2>

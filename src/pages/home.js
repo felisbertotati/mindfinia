@@ -49,7 +49,7 @@ const home = () => {
       >
         <Carousel />
       </div>
-      <div className="row align-items-center">
+      <div className="row">
         <div className="col-md-7">
           <hr />
           <h4 className="about ">About Mindfinia</h4>

@@ -18,6 +18,7 @@ const OurCustomers = () => {
         alignItems: "center",
         justifyContent: "center",
         height: "100%",
+        marginTop: "5vw",
       }}
     >
       <hr />

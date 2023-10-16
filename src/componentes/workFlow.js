@@ -41,7 +41,7 @@ const WorkFlow = () => {
   ];
 
   return (
-    <div className="workflow">
+    <div className="workflow  mb-5">
       <div>
         <hr className="hrwork" />
         <h2 className="flow">Work Flow</h2>
