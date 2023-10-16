@@ -5,7 +5,7 @@ import iconThree from "../images/iconthree.png";
 
 const Card = (props) => (
   <div
-    className="card cardStyle"
+    className={`card cardStyle ${props.isActive ? "active" : ""}`}
     style={{
       flex: "1 0 250px",
       margin: "2rem",
@@ -81,12 +81,13 @@ const CardContainer = (props) => {
           transition: "scroll-left 0.5s",
         }}
       >
-        {props.cards.map((card) => (
+        {props.cards.map((card, index) => (
           <Card
             key={card.title}
             title={card.title}
             desc={card.desc}
             image={card.image}
+            isActive={activeIndex === index}
           />
         ))}
       </div>
@@ -97,7 +98,7 @@ const CardContainer = (props) => {
             style={{
               height: "8px",
               width: "8px",
-              backgroundColor: activeIndex === index ? "#6AD7E5" : "#ddd",
+              backgroundColor: activeIndex === index ? "#6AD7E5" : "#FFFF",
               borderRadius: "50%",
               display: "inline-block",
               margin: "0 2px",

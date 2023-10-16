@@ -61,9 +61,8 @@ const Footer = () => {
         <hr
           className="footerHr text-white-50 "
           style={{
-            width: "95%",
+            width: "100%",
             height: "1px",
-            marginLeft: "30px",
           }}
         />
         <p className="text-white-50 text-center">

@@ -154,6 +154,16 @@ hr {
   margin-left: 50px;
 }
 
+.card.cardStyle.active {
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.card.cardStyle:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  border: 1px #6ad7e5 solid;
+}
 /*our customer file*/
 .our {
   color: black;
@@ -223,10 +233,56 @@ hr {
 /*work flow*/
 
 .workflow {
-  max-width: 800px;
+  max-width: 50vw;
   margin: 0 auto;
   padding: 20px;
   font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  height: 2px;
+  width: 100%; /* Or whatever thickness you prefer */
+  background-color: #6ad7e5; /* Color of the line, same as the border color */
+  z-index: -1; /* Put the line behind the items */
+}
+
+.line1 {
+  position: relative;
+  top: -25px;
+  width: 20%;
+  height: 25px;
+  border-right: 2px solid #6ad7e5;
+}
+
+.line2 {
+  position: relative;
+  left: 5%;
+  top: -25px;
+  width: 20%;
+  height: 25px;
+  border-right: 2px solid #6ad7e5;
+}
+
+.line3 {
+  position: relative;
+  left: 50%;
+  top: -75px;
+  width: 20%;
+  height: 25px;
+  border-right: 2px solid #6ad7e5;
+}
+
+.line4 {
+  position: relative;
+  left: 55%;
+  top: -75px;
+  width: 20%;
+  height: 25px;
+  border-right: 2px solid #6ad7e5;
 }
 
 .workflow h2,
@@ -254,30 +310,39 @@ hr {
 }
 
 .timeline {
-  display: flex;
-  justify-content: space-between;
   position: relative;
+  padding: 20px;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #ddd;
-  z-index: -1;
+.top-items,
+.bottom-items {
+  display: flex;
+}
+
+.top-items {
+  margin-left: 2%;
+  gap: 15%;
+}
+
+.bottom-items {
+  margin-left: 15%;
+  gap: 15%;
 }
 
 .header-section {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
+.timeline-id,
+.timeline-title {
+  display: inline-block;
+}
+
 .timeline-content {
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 180px;
   background: white;
   border-radius: 9px;
   border: 1px #e7daed solid;
@@ -299,7 +364,6 @@ hr {
 .timeline-title {
   font-weight: bold;
   font-size: 18px;
-  margin-right: 10px;
 }
 
 .timeline-content p {
@@ -316,25 +380,24 @@ hr {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   word-wrap: break-word;
-  margin-right: 10px;
-}
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #6ad7e5;
-  z-index: -1;
+  margin-right: 5px;
 }
 
 .top {
-  margin-bottom: 300px;
+  margin-bottom: 50px;
 }
 
 .bottom {
-  margin-top: 300px;
+  margin-top: 50px;
+}
+
+.trophy {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 20px; /* Adjust this value as necessary to control the distance from the timeline */
+  z-index: 1; /* To ensure the image stays above the timeline */
 }
 
 /*footer*/
