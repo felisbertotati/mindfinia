@@ -28,7 +28,13 @@ const logoCarousel = () => {
   ];
 
   return (
-    <div className="slider bg-light">
+    <div
+      className="slider bg-light"
+      style={{
+        height: "7vw",
+        paddingTop: "1vw",
+      }}
+    >
       <div className="slide-track">
         {images.map((imageSrc, index) => (
           <div key={index} className={`slide slide-${(index % 9) + 1}`}>

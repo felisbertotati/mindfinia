@@ -43,7 +43,7 @@ const WorkFlow = () => {
   return (
     <div className="workflow  mb-5">
       <div>
-        <hr className="hrwork" />
+        <hr className="hrwork" style={{ marginLeft: "22vw" }} />
         <h2 className="flow">Work Flow</h2>
         <h1>How we Work</h1>
       </div>

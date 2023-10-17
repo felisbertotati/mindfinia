@@ -30,13 +30,15 @@ const home = () => {
             zIndex: "-1",
           }}
         >
-          <div className="heroText">
-            <p className="lead d-flex justify-content-center text-light  fs-3">
-              "Mindfinia" combines intellectual expertise ("Mind") with
-              limitless technological possibilities ("Finia"), encapsulating a
-              promise of strategic insight and boundless solutions for
-              technology consulting and services
-            </p>
+          <div className="d-flex justify-content-center align-items-center ">
+            <div className="heroText ">
+              <p className="lead text-center text-light mb-0  ">
+                "Mindfinia" combines intellectual expertise ("Mind") with
+                limitless technological possibilities ("Finia"), encapsulating a
+                promise of strategic insight and boundless solutions for
+                technology consulting and services
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +53,7 @@ const home = () => {
       </div>
       <div className="row">
         <div className="col-md-7">
-          <hr />
+          <hr style={{ marginLeft: "3.5vw" }} />
           <h4 className="about ">About Mindfinia</h4>
           <p className="paragraph">
             Welcome to Gravity Infosolutions, a visionary force reshaping the
@@ -73,7 +75,7 @@ const home = () => {
       </div>
       <div className="row ">
         <div className="col-md-6 meetPeople">
-          <hr />
+          <hr className="hrPeople" />
           <h6 className="people">Meet the people</h6>
           <h4 className="WorkingWith">We are Working With</h4>
         </div>
@@ -95,7 +97,7 @@ const home = () => {
       <div>
         <div className="row align-items-center mb-5">
           <div className="col-md-7">
-            <hr />
+            <hr style={{ marginLeft: "3.5vw" }} />
             <h4 className="about ">Why Choose Us</h4>
             <h6 className="heading">
               UNMATCHED EXPERTISE, EMPOWERING SCALABILITY, & IRRESISTIBLE

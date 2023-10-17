@@ -142,13 +142,18 @@ const Services = () => {
   ];
 
   return (
-    <div className="div" style={{ background: "#F7FEFF" }}>
-      <div className="container" style={{ width: "90%", margin: "auto" }}>
+    <div className="div" style={{ background: "#F7FEFF", paddingTop: "30px" }}>
+      <div
+        className="container"
+        style={{
+          width: "90%",
+          height: "35vw",
+        }}
+      >
         <hr
           className="hr"
           style={{
             marginLeft: "600px",
-            marginTop: "20px",
           }}
         />
         <h1 style={{ textAlign: "center" }}>Services we offer</h1>
