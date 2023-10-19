@@ -23,31 +23,30 @@ const Ability = () => {
   return (
     <Container
       fluid
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "50vh",
-        background: "#F7F7FA",
-      }}
+      className="d-flex flex-column justify-content-center align-items-center"
+      style={{ minHeight: "50vh", background: "#F7F7FA" }}
     >
       <Row className="justify-content-center">
         {cardInfo.map((card, index) => (
-          <Col key={index} md={4} className="mb-4">
+          <Col
+            key={index}
+            xs="12"
+            sm="6"
+            md="4"
+            className="mb-4 d-flex justify-content-center"
+          >
             <Card
+              className="text-center"
               style={{ width: "18rem", border: "none", background: "#F7F7FA" }}
             >
-              <Card.Body style={{ textAlign: "center" }}>
+              <Card.Body>
                 <Card.Title
+                  className="d-flex align-items-center justify-content-center"
                   style={{
                     width: "100px",
                     height: "100px",
                     borderRadius: "50%",
                     border: "2px black solid",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
                     margin: "5px auto",
                   }}
                 >

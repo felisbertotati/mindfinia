@@ -12,6 +12,8 @@ const Card = (props) => (
       overflow: "hidden",
       borderRadius: "6px",
       cursor: "pointer",
+      boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+      border: "none",
     }}
   >
     <img
@@ -142,7 +144,14 @@ const Services = () => {
   ];
 
   return (
-    <div className="div" style={{ background: "#F7FEFF", paddingTop: "30px" }}>
+    <div
+      className="div"
+      style={{
+        background: "#F7FEFF",
+        paddingTop: "30px",
+        height: "550px",
+      }}
+    >
       <div
         className="container"
         style={{

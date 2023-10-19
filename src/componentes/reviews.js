@@ -12,6 +12,8 @@ import PhotoTwo from "../images/photoTwo.png";
 import PhotoThree from "../images/photothree.png";
 import PhotoFour from "../images/photofour.png";
 import PhotoFive from "../images/photofive.png";
+import { Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const testimonials = [
   {
@@ -89,12 +91,12 @@ const Reviews = () => {
   };
 
   return (
-    <div className="content-wrapper container mt-5">
+    <Container className="mt-5">
       <hr className="hrReviws" />
       <h1 className="mb-4 text-center">Why customers love</h1>
       <h2 className="text-center mb-5">working with us</h2>
-      <div className="row justify-content-center">
-        <div className="col-12 col-lg-9 position-relative">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={9} className="position-relative">
           {currentPerson !== 0 && (
             <FontAwesomeIcon
               icon={faArrowLeft}
@@ -124,29 +126,41 @@ const Reviews = () => {
               onClick={() => slide(currentPerson + 1)}
             />
           )}
-        </div>
-        <div className="col-12 d-flex justify-content-center mt-4">
+        </Col>
+
+        <Col xs={12} className="d-flex justify-content-center mt-4">
           {testimonials.map((_, index) => (
             <div
               key={index}
-              className={`reviewer-card-wrapper ${
+              className={`reviewer-card-wrapper mx-1 ${
+                // Added mx-1 for small horizontal spacing
                 currentPerson === index ? "active-card" : "inactive-card"
               }`}
               onClick={() => slide(index)}
             >
-              <img src={reviwers[index].Image} alt={reviwers[index].Name} />
+              <img
+                src={reviwers[index].Image}
+                alt={reviwers[index].Name}
+                className="img-fluid"
+              />{" "}
+              {/* img-fluid to ensure the image resizes responsively */}
               <div>
                 {[...Array(reviwers[index].Rating)].map((_, idx) => (
-                  <FontAwesomeIcon key={idx} icon={faStar} color="yellow" />
+                  <FontAwesomeIcon
+                    key={idx}
+                    icon={faStar}
+                    color="yellow"
+                    className="star-icon"
+                  />
                 ))}
               </div>
               <p>{reviwers[index].Name}</p>
               <p>{reviwers[index].Prof}</p>
             </div>
           ))}
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

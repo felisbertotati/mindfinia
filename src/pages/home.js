@@ -18,17 +18,8 @@ const home = () => {
     <>
       <div className="style" style={{ width: "100vw", height: "70vh" }}>
         <div
-          style={{
-            backgroundImage: `url(${HeroImage})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            width: "100%",
-            height: "625px",
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: "-1",
-          }}
+          className="hero-background"
+          style={{ backgroundImage: `url(${HeroImage})` }}
         >
           <div className="d-flex justify-content-center align-items-center ">
             <div className="heroText ">
@@ -52,9 +43,14 @@ const home = () => {
         <Carousel />
       </div>
       <div className="row">
-        <div className="col-md-7">
-          <hr style={{ marginLeft: "3.5vw" }} />
-          <h4 className="about ">About Mindfinia</h4>
+        <div className="col-12 col-md-7">
+          <hr
+            style={{
+              marginLeft: "3.5vw",
+              marginTop: "5vw",
+            }}
+          />
+          <h4 className="about">About Mindfinia</h4>
           <p className="paragraph">
             Welcome to Gravity Infosolutions, a visionary force reshaping the
             landscape of Digital Transformation, CRM, and Cloud Consulting. We
@@ -65,29 +61,30 @@ const home = () => {
             expectations, delivering unprecedented growth on a global scale.
           </p>
         </div>
-        <div className="col-md-5">
+        <div className="col-12 col-md-5 text-center mt-4 mt-md-0">
           <img
-            className="aboutImage"
+            className="aboutImage img-fluid"
             src={imageAbout}
             alt="Image about the company"
           />
         </div>
       </div>
-      <div className="row ">
-        <div className="col-md-6 meetPeople">
+      <div className="row mt-2">
+        <div className="col-12 col-md-6 meetPeople">
           <hr className="hrPeople" />
           <h6 className="people">Meet the people</h6>
           <h4 className="WorkingWith">We are Working With</h4>
         </div>
-        <div className=" buttonArrow col-md-6 d-flex  mb-5 justify-content-end">
+        <div className="col-12 col-md-6 d-flex justify-content-between justify-content-md-end mt-3 mt-md-0">
           <button className="iconleft">
             <FontAwesomeIcon icon={faArrowLeft} />
           </button>
-          <button className="iconright">
+          <button className="iconright ml-3">
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>
       </div>
+
       <div>
         <LogoCarousel />
       </div>
@@ -96,7 +93,7 @@ const home = () => {
       </div>
       <div>
         <div className="row align-items-center mb-5">
-          <div className="col-md-7">
+          <div className=" col-md-7 col-sm-12 t">
             <hr style={{ marginLeft: "3.5vw" }} />
             <h4 className="about ">Why Choose Us</h4>
             <h6 className="heading">
@@ -116,7 +113,7 @@ const home = () => {
               achieve unrivaled success.
             </p>
           </div>
-          <div className="col-md-5">
+          <div className="col-md-5 col-sm-12 text-center">
             <img
               className="aboutImage"
               src={WhyUsImage}

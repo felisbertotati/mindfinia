@@ -4,6 +4,16 @@ html {
   overflow-x: hidden;
 }
 
+.hero-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 625px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 /*navbar*/
 
 .unlist {
@@ -37,24 +47,18 @@ html {
   transition: all 0.3s linear;
 }
 
-.navbar.border-bottom {
-  border-bottom: 1px solid #f1f1f1;
-}
-.navbar-nav .nav-item {
-  padding-left: 20px;
+.list {
+  padding: 18px 10px;
+  color: white;
+  transition: color 0.3s ease;
   position: relative;
 }
 
-.active-link {
-  border-bottom: 2px solid white;
+.list:hover {
+  color: #f1f1f1; /* or any hover color you prefer */
 }
 
-.navbar-nav .nav-item .nav-link {
-  transition: color 0.3s ease;
-  padding: 0;
-}
-
-.navbar-nav .nav-item::after {
+.list::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -65,8 +69,12 @@ html {
   transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-item:hover::after {
+.list:hover::after {
   width: calc(100% - 2px);
+}
+
+.not-home .list {
+  color: black;
 }
 
 /*Jumbotron style*/
@@ -156,6 +164,7 @@ hr {
   border: #6ad7e5 1px solid;
   height: 40px;
   width: 40px;
+  margin-bottom: 5vw;
 }
 
 .iconright {
@@ -242,6 +251,9 @@ hr {
   right: -80px;
   cursor: pointer;
   transform: translateY(-50%);
+}
+.star-icon {
+  font-size: 1.5em;
 }
 
 .reviewer-card-wrapper {
@@ -473,6 +485,11 @@ hr {
   display: none;
 }
 @media (max-width: 600px) {
+  .hero-background {
+    height: 500px;
+    width: 475px;
+    left: 0;
+  }
   .burger {
     display: flex;
   }
@@ -506,6 +523,21 @@ hr {
 
   .slide {
     display: none;
+  }
+
+  .iconright {
+    margin-right: 175px;
+  }
+  .iconleft {
+    margin-left: 175px;
+  }
+  .aboutImage {
+    height: 60%;
+    width: 80%;
+  }
+
+  .star-icon {
+    font-size: 0.75em;
   }
 }
 
