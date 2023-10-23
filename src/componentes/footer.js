@@ -9,7 +9,7 @@ const Footer = () => {
         background: "#00252A",
         padding: "20px 0",
         bottom: 0,
-        width: "100%",
+        width: "100vw",
       }}
     >
       <div className="container mt-5 ">

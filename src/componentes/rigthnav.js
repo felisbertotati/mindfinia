@@ -6,33 +6,62 @@ const RightNav = ({ open }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const style = {
-    transform: open ? "translateX(0)" : "translateX(100%)",
+    transform: open ? "translateX(0)" : "translateX(130%)",
+    transition: open ? "transform 0.3s ease-out" : "transform 0.3s ease-out",
   };
-  return (
-    <div className={`nav-container ${isHomePage ? "" : "not-home"}`}>
-      <div style={style}>
-        <ul className="unlist">
-          <Link to="/">
-            <li className="list ">Home</li>
-          </Link>
-          <Link to="/about">
-            <li className="list">About Us</li>
-          </Link>
-          <Link to="/who-we-are">
-            <li className="list">Who We are</li>
-          </Link>
-          <Link to="/what-we-do">
-            <li className="list">What We Do?</li>
-          </Link>
-          <Link to="/solution">
-            <li className="list">Solution</li>
-          </Link>
-          <Link to="/contact">
-            <li className="list">Contact Us</li>
-          </Link>
-        </ul>
-      </div>
+
+  const mobile = (
+    <div className={`nav-mobile ${isHomePage ? "" : "not-home"}`} style={style}>
+      <Link className="nav-link" to="/">
+        <li className="list ">Home</li>
+      </Link>
+      <Link className="nav-link" to="/about">
+        <li className="list">About Us</li>
+      </Link>
+      <Link className="nav-link" to="/who-we-are">
+        <li className="list">Who We are</li>
+      </Link>
+      <Link className="nav-link" to="/what-we-do">
+        <li className="list">What We Do?</li>
+      </Link>
+      <Link className="nav-link" to="/solution">
+        <li className="list">Solution</li>
+      </Link>
+      <Link className="nav-link" to="/contact">
+        <li className="list">Contact Us</li>
+      </Link>
     </div>
+  );
+
+  const desktop = (
+    <div className={`nav-desktop ${isHomePage ? "" : "not-home"}`}>
+      <Link className="nav-link" to="/">
+        <li className="list ">Home</li>
+      </Link>
+      <Link className="nav-link" to="/about">
+        <li className="list">About Us</li>
+      </Link>
+      <Link className="nav-link" to="/who-we-are">
+        <li className="list">Who We are</li>
+      </Link>
+      <Link className="nav-link" to="/what-we-do">
+        <li className="list">What We Do?</li>
+      </Link>
+      <Link className="nav-link" to="/solution">
+        <li className="list">Solution</li>
+      </Link>
+      <Link className="nav-link" to="/contact">
+        <li className="list">Contact Us</li>
+      </Link>
+    </div>
+  );
+  return (
+    <>
+      <div className="md:hidden">{mobile}</div>
+      <div className="hidden md:flex md:justify-center lg:flex lg:justify-center xl:flex xl:justify-center">
+        {desktop}
+      </div>
+    </>
   );
 };
 

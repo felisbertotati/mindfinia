@@ -15,16 +15,29 @@ html {
   z-index: -1;
 }
 /*navbar*/
-
-.unlist {
-  list-style: none;
-  display: flex;
-  flex-flow: row nowrap;
-}
 .list {
   padding: 25px 10px;
   color: white;
   font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-desktop {
+  height: 100px;
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.nav-link {
+  text-decoration: none;
 }
 
 .burger {
@@ -37,14 +50,6 @@ html {
   justify-content: space-around;
   flex-flow: column nowrap;
   z-index: 20;
-}
-
-.burgerLine {
-  width: 2rem;
-  height: 0.25rem;
-  transform-origin: 1px;
-  border-radius: 10px;
-  transition: all 0.3s linear;
 }
 
 .list {
@@ -199,12 +204,6 @@ hr {
 .card.cardStyle.active {
   transform: translateY(10px);
   transition: transform 0.3s ease;
-}
-
-.card.cardStyle:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-  border: 1px #6ad7e5 solid;
 }
 /*our customer file*/
 .our {
@@ -469,6 +468,36 @@ hr {
 
 /*aboutUs file*/
 
+.AboutContainer {
+  margin-top: 2vw;
+}
+
+.mindparagraph {
+  color: #3e3e3e;
+  font-size: 18px;
+  font-family: Rubik;
+  font-weight: 400;
+  line-height: 27.81px;
+  letter-spacing: 0.99px;
+  word-wrap: break-word;
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+.mindAreWe {
+  color: #6f6f6f;
+  font-size: 18px;
+  font-family: Rubik;
+  font-weight: 400;
+  line-height: 27.81px;
+  letter-spacing: 0.99px;
+  word-wrap: break-word;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 5vw;
+}
 /*hero image*/
 
 .Imagehero {
@@ -490,8 +519,27 @@ hr {
     width: 475px;
     left: 0;
   }
-  .burger {
+
+  .burgerLine {
+    width: 2rem;
+    height: 0.25rem;
+    transform-origin: 1px;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
     display: flex;
+    flex-direction: column;
+    width: 30vw;
+    background-color: black;
+    height: 100vh;
+    list-style: none;
+    text-decoration: none;
   }
   .unlist {
     opacity: 0;
@@ -538,11 +586,5 @@ hr {
 
   .star-icon {
     font-size: 0.75em;
-  }
-}
-
-@media (min-width: 601px) {
-  .burger {
-    display: none;
   }
 }

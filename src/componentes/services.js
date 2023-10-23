@@ -9,11 +9,13 @@ const Card = (props) => (
     style={{
       flex: "1 0 250px",
       margin: "2rem",
-      overflow: "hidden",
       borderRadius: "6px",
       cursor: "pointer",
       boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
       border: "none",
+      boxShadow: props.isActive
+        ? "0 0 0 1px #6ad7e5, 0 4px 8px rgba(0,0,0,0.1)"
+        : "0 4px 8px rgba(0,0,0,0.1)",
     }}
   >
     <img
