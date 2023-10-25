@@ -15,7 +15,7 @@ const AboutUs = () => {
         }}
       >
         <h1 className="mindFinia mb-5  mt-5">About Mindfinia</h1>
-        <p className="mindparagraph  col-12 col-sm-5 col-md-8 col-lg-9">
+        <p className="mindparagraph  mb-5 col-12 col-sm-5 col-md-8 col-lg-9">
           Welcome to Gravity Infosolutions, a visionary force reshaping the
           landscape of Digital Transformation, CRM, and Cloud Consulting. We
           ignite a global revolution in IT Services, forging strategic alliances
