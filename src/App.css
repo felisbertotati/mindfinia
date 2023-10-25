@@ -539,7 +539,7 @@ hr {
 }
 @media (max-width: 691px) {
   .hero-background {
-    height: 90vw;
+    height: 92vw;
     width: 100vw;
   }
 
@@ -587,9 +587,9 @@ hr {
     line-height: 25px;
   }
 
-  .slide {
+  /* .slide {
     display: none;
-  }
+  } */
 
   .iconright {
     margin-right: 175px;
@@ -607,8 +607,8 @@ hr {
   }
 
   .timeline-content {
-    width: 150px;
-    height: 100px;
+    width: 200px;
+    height: 150px;
   }
 
   .timeline-content p {
