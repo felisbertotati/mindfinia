@@ -10,11 +10,12 @@ const AboutUs = () => {
         className="HeroAbout d-flex flex-column align-items-center justify-content-center"
         style={{
           background: "#6AD7E5",
-          height: "60vw",
+
+          position: "relative",
         }}
       >
-        <h1 className="mindFinia mb-5 ">About Mindfinia</h1>
-        <p className="mindparagraph col-12 col-sm-5 col-md-8 col-lg-9">
+        <h1 className="mindFinia mb-5  mt-5">About Mindfinia</h1>
+        <p className="mindparagraph  col-12 col-sm-5 col-md-8 col-lg-9">
           Welcome to Gravity Infosolutions, a visionary force reshaping the
           landscape of Digital Transformation, CRM, and Cloud Consulting. We
           ignite a global revolution in IT Services, forging strategic alliances
@@ -29,7 +30,7 @@ const AboutUs = () => {
           alt="about us image"
         />
       </div>
-      <div className="d-flex flex-column align-items-center w-100">
+      <div className=" whoAreWe d-flex flex-column align-items-center w-100">
         <hr className="mt-5" />
         <h1 className="mb-5">Who are we</h1>
         <p className="mindAreWe text-center">
@@ -49,7 +50,7 @@ const AboutUs = () => {
           unprecedented growth on a global scale.
         </p>
       </div>
-      <div className="card">
+      <div className="card cardVision mb-5">
         <div className="row no-gutters align-items-center">
           <div className="col-md-8 p-4">
             <h3>Our Vision</h3>
@@ -72,7 +73,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="card">
+      <div className="card cardMission mb-5">
         <div className="row no-gutters align-items-center">
           <div className="col-md-4">
             <img

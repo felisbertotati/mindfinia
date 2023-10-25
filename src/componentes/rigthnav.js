@@ -6,7 +6,7 @@ const RightNav = ({ open }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const style = {
-    transform: open ? "translateX(0)" : "translateX(130%)",
+    transform: open ? "translateX(80%)" : "translateX(200%)",
     transition: open ? "transform 0.3s ease-out" : "transform 0.3s ease-out",
   };
 

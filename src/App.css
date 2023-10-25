@@ -8,7 +8,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 625px;
+  height: 550px;
   position: absolute;
   top: 0;
   left: 0;
@@ -167,6 +167,7 @@ hr {
   background-color: white;
   margin-right: 15px;
   border: #6ad7e5 1px solid;
+  margin-top: 45px;
   height: 40px;
   width: 40px;
   margin-bottom: 5vw;
@@ -176,7 +177,7 @@ hr {
   color: white;
   border-radius: 50%;
   background-color: #6ad7e5;
-
+  margin-top: 45px;
   border: #6ad7e5 1px solid;
   height: 40px;
   width: 40px;
@@ -289,9 +290,9 @@ hr {
   top: 50%;
   bottom: 0;
   height: 2px;
-  width: 100%; /* Or whatever thickness you prefer */
-  background-color: #6ad7e5; /* Color of the line, same as the border color */
-  z-index: -1; /* Put the line behind the items */
+  width: 100%;
+  background-color: #6ad7e5;
+  z-index: -1;
 }
 
 .line1 {
@@ -468,9 +469,9 @@ hr {
 
 /*aboutUs file*/
 
-.AboutContainer {
+/* .AboutContainer {
   margin-top: 2vw;
-}
+} */
 
 .mindparagraph {
   color: #3e3e3e;
@@ -484,6 +485,7 @@ hr {
   padding-right: 200px;
   text-align: center;
   margin-bottom: 5vw;
+  height: 75vh;
 }
 
 .mindAreWe {
@@ -501,9 +503,12 @@ hr {
 /*hero image*/
 
 .Imagehero {
-  width: 85vw;
-  height: 35vw;
+  width: 70vw;
+  height: 30vw;
   border-radius: 2vmin;
+  position: absolute;
+  top: 40%;
+  transform: translateY(0); /* This keeps the center of the image 50% down */
 }
 
 .collapse.show {
@@ -513,11 +518,24 @@ hr {
 .collapse.notshow {
   display: none;
 }
-@media (max-width: 600px) {
+
+.cardVision {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #000;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cardMission {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #000;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 691px) {
   .hero-background {
-    height: 500px;
-    width: 475px;
-    left: 0;
+    height: 125vw;
+    width: 100vw;
   }
 
   .burgerLine {
@@ -537,7 +555,7 @@ hr {
     flex-direction: column;
     width: 30vw;
     background-color: black;
-    height: 100vh;
+    height: 70vh;
     list-style: none;
     text-decoration: none;
   }
@@ -552,19 +570,14 @@ hr {
     height: 100vh;
     width: 300px;
     padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transform: translateX(100%);
   }
 
   /* Style when the menu is open */
-  .unlist[style*="translateX(0)"] {
-    opacity: 1;
-    pointer-events: all;
-  }
+
   .lead {
     font-size: 7.5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-weight: 150;
     line-height: 25px;
   }
@@ -586,5 +599,56 @@ hr {
 
   .star-icon {
     font-size: 0.75em;
+  }
+
+  .timeline-content {
+    width: 150px;
+    height: 100px;
+  }
+
+  .timeline-content p {
+    font-size: 10px;
+  }
+  .timeline-period {
+    font-size: 20px;
+  }
+  .timeline-title {
+    font-size: 13px;
+  }
+  .top {
+    margin-bottom: 80px;
+  }
+  .timeline {
+    width: 75vw;
+  }
+
+  .mindparagraph {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10px;
+    margin-top: -30px;
+    line-height: 15px;
+    height: 30vh;
+  }
+  .Imagehero {
+    width: 70vw;
+    height: 30vw;
+    border-radius: 2vmin;
+    position: absolute;
+    top: 70%;
+    transform: translateY(0); /* This keeps the center of the image 50% down */
+  }
+
+  .whoAreWe {
+    margin-top: -10px;
+  }
+
+  .mindAreWe {
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    line-height: 20px;
+    margin-bottom: 10vw;
   }
 }

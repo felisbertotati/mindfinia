@@ -16,7 +16,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const home = () => {
   return (
     <>
-      <div className="style" style={{ width: "100vw", height: "70vh" }}>
+      <div className="style" style={{ width: "100vw", height: "60vh" }}>
         <div
           className="hero-background"
           style={{ backgroundImage: `url(${HeroImage})` }}
@@ -50,6 +50,7 @@ const home = () => {
               marginTop: "5vw",
             }}
           />
+
           <h4 className="about">About Mindfinia</h4>
           <p className="paragraph">
             Welcome to Gravity Infosolutions, a visionary force reshaping the
@@ -69,13 +70,13 @@ const home = () => {
           />
         </div>
       </div>
-      <div className="row mt-2">
-        <div className="col-12 col-md-6 meetPeople">
+      <div className=" container row mt-2">
+        <div className="col-12 col-md-5 meetPeople">
           <hr className="hrPeople" />
           <h6 className="people">Meet the people</h6>
           <h4 className="WorkingWith">We are Working With</h4>
         </div>
-        <div className="col-12 col-md-6 d-flex justify-content-between justify-content-md-end mt-3 mt-md-0">
+        <div className="col-12 col-md-6 d-flex justify-content-between justify-content-md-end">
           <button className="iconleft">
             <FontAwesomeIcon icon={faArrowLeft} />
           </button>
