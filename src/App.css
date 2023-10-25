@@ -485,7 +485,7 @@ hr {
   padding-right: 200px;
   text-align: center;
   margin-bottom: 5vw;
-  height: 75vh;
+  height: 60vh;
 }
 
 .mindAreWe {
@@ -499,6 +499,10 @@ hr {
   padding-left: 100px;
   padding-right: 100px;
   margin-bottom: 5vw;
+}
+
+.whoAreWe {
+  margin-top: 7vw;
 }
 /*hero image*/
 
