@@ -656,11 +656,11 @@ hr {
 
   .timeline-content {
     width: 200px;
-    height: 150px;
+    height: 100px;
   }
 
   .timeline-content p {
-    font-size: 10px;
+    font-size: 15px;
   }
   .timeline-period {
     display: none;
@@ -679,7 +679,7 @@ hr {
     margin-top: -30px;
     line-height: 15px;
     height: 30vh;
-    margin-bottom: 20px;
+    margin-bottom: 90px;
   }
   .Imagehero {
     width: 70vw;
