@@ -25,7 +25,12 @@ const home = () => {
     >
       <div
         className="style"
-        style={{ width: "100vw", height: "100vh", position: "relative" }}
+        style={{
+          width: "100vw",
+          height: "100vh",
+          position: "relative",
+          zIndex: "-1",
+        }}
       >
         <div
           className="hero-background"

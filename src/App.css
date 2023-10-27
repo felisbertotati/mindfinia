@@ -51,6 +51,8 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 1000;
+  position: relative;
 }
 
 .nav-mobile {
@@ -99,9 +101,9 @@ footer {
   width: calc(100% - 2px);
 }
 
-/* .not-home .list {
+.not-home .list {
   color: black;
-} */
+}
 
 /*Jumbotron style*/
 .lead {
@@ -129,9 +131,10 @@ footer {
   height: 50px;
   margin-right: 40px;
   margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
-  align-items: center; /* vertically center the text in the slide */
-  white-space: nowrap; /* prevent the word from breaking onto multiple lines */
+  align-items: center;
+  white-space: nowrap;
 }
 
 .slider .slide-track {
@@ -557,6 +560,7 @@ hr {
   position: absolute;
   top: 50%;
   transform: translateY(0); /* This keeps the center of the image 50% down */
+  z-index: -1;
 }
 
 .collapse.show {
@@ -580,7 +584,7 @@ hr {
   border: 2px solid #000;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
-@media (max-width: 691px) {
+@media (max-width: 576px) {
   .hero-background {
     height: 90vh;
     background-size: cover;
@@ -651,16 +655,24 @@ hr {
   }
 
   .star-icon {
-    font-size: 0.75em;
+    font-size: 0.6em;
   }
 
   .timeline-content {
-    width: 200px;
+    width: 150px;
     height: 100px;
   }
 
+  .timeline-title {
+    font-size: 12px;
+  }
+
+  .timeline-id {
+    font-size: 13px;
+  }
+
   .timeline-content p {
-    font-size: 15px;
+    font-size: 10px;
   }
   .timeline-period {
     display: none;
@@ -755,9 +767,9 @@ hr {
 
   .top-items,
   .bottom-items {
-    flex-direction: column; /* Stack items on top of each other for small screens */
-    align-items: center; /* Center the items */
-    gap: 10px; /* Reduce gap for smaller screens */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
   .trophy {
     left: 40%;
