@@ -6,7 +6,7 @@ const RightNav = ({ open }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const style = {
-    transform: open ? "translateX(80%)" : "translateX(200%)",
+    transform: open ? "translateX(0%)" : "translateX(100%)",
     transition: open ? "transform 0.3s ease-out" : "transform 0.3s ease-out",
   };
 
@@ -58,7 +58,7 @@ const RightNav = ({ open }) => {
   return (
     <>
       <div className="md:hidden">{mobile}</div>
-      <div className="hidden md:flex md:justify-center lg:flex lg:justify-center xl:flex xl:justify-center">
+      <div className="hidden md:flex md:justify-center lg:flex lg:justify-center xl:flex xl:justify-center ">
         {desktop}
       </div>
     </>

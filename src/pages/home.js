@@ -15,8 +15,18 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const home = () => {
   return (
-    <>
-      <div className="style" style={{ width: "100vw", height: "60vh" }}>
+    <div
+      style={{
+        position: "relative",
+        top: "-15vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        className="style"
+        style={{ width: "100vw", height: "100vh", position: "relative" }}
+      >
         <div
           className="hero-background"
           style={{ backgroundImage: `url(${HeroImage})` }}
@@ -32,15 +42,18 @@ const home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="carousel"
-        style={{
-          overflowX: "hidden",
-          width: "100vw",
-        }}
-      >
-        <Carousel />
+        <div
+          className="carousel"
+          style={{
+            overflowX: "hidden",
+            width: "100vw",
+            height: "10vh",
+            position: "absolute",
+            bottom: 0,
+          }}
+        >
+          <Carousel />
+        </div>
       </div>
       <div className="row">
         <div className="col-12 col-md-7">
@@ -129,7 +142,7 @@ const home = () => {
       <Ourcustomers />
       <Reviews />
       <WorkFlow />
-    </>
+    </div>
   );
 };
 

@@ -47,47 +47,49 @@ const WorkFlow = () => {
         <h2 className="flow">Work Flow</h2>
         <h1>How we Work</h1>
       </div>
-      <div className="timeline">
-        <div className="timeline-line">
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-          <div className="line4"></div>
-        </div>
-        <img className="trophy" src={Trophy} alt="trophy" />
+      <div className="timeline-container">
+        <div className="timeline">
+          <div className="timeline-line">
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
+            <div className="line4"></div>
+          </div>
+          <img className="trophy" src={Trophy} alt="trophy" />
 
-        {/* Render top items */}
-        <div className="top-items">
-          {ourWork.map(
-            (step, index) =>
-              index % 2 === 0 && (
-                <TimelineItem
-                  key={index}
-                  id={step.id}
-                  period={step.period}
-                  title={step.title}
-                  desc={step.desc}
-                  position="top"
-                />
-              )
-          )}
-        </div>
+          {/* Render top items */}
+          <div className="top-items">
+            {ourWork.map(
+              (step, index) =>
+                index % 2 === 0 && (
+                  <TimelineItem
+                    key={index}
+                    id={step.id}
+                    period={step.period}
+                    title={step.title}
+                    desc={step.desc}
+                    position="top"
+                  />
+                )
+            )}
+          </div>
 
-        {/* Render bottom items */}
-        <div className="bottom-items">
-          {ourWork.map(
-            (step, index) =>
-              index % 2 !== 0 && (
-                <TimelineItem
-                  key={index}
-                  id={step.id}
-                  period={step.period}
-                  title={step.title}
-                  desc={step.desc}
-                  position="bottom"
-                />
-              )
-          )}
+          {/* Render bottom items */}
+          <div className="bottom-items">
+            {ourWork.map(
+              (step, index) =>
+                index % 2 !== 0 && (
+                  <TimelineItem
+                    key={index}
+                    id={step.id}
+                    period={step.period}
+                    title={step.title}
+                    desc={step.desc}
+                    position="bottom"
+                  />
+                )
+            )}
+          </div>
         </div>
       </div>
     </div>

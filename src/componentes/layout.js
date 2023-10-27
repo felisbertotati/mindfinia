@@ -4,9 +4,9 @@ import NavBar from "./navBar";
 import Footer from "./footer";
 
 const Layout = ({ children }) => (
-  <div className="container-fluid p-0">
+  <div className="app">
     <NavBar />
-    <div>{children}</div>
+    <div className="content">{children}</div>
     <Footer />
   </div>
 );

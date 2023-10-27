@@ -12,6 +12,7 @@ const AboutUs = () => {
           background: "#6AD7E5",
 
           position: "relative",
+          zIndex: "100",
         }}
       >
         <h1 className="mindFinia mb-5  mt-5">About Mindfinia</h1>

@@ -7,7 +7,7 @@ const NavBar = () => {
     <div
       style={{
         width: "100vw",
-        height: "100px",
+        height: "15vh",
         padding: "0 18px",
         display: "flex",
         justifyContent: "space-between",
