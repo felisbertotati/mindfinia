@@ -582,7 +582,7 @@ hr {
 }
 @media (max-width: 691px) {
   .hero-background {
-    height: 150vw;
+    height: 180vw;
     width: 100vw;
   }
 
@@ -631,7 +631,7 @@ hr {
     padding-right: 15px;
     font-weight: 150;
     line-height: 25px;
-    margin-top: 125px;
+    margin-top: 200px;
   }
 
   /* .slide {
